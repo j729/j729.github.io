@@ -35,7 +35,7 @@
   <h1 style="font-size: 110px;"><img src="Azura/01.gif"width="100"></img><img src="download.jpg" width="60"></img> Ligma<img src="Azura/__hikari_blue_archive_drawn_by_seseren__20b826f5ef00e3deaffee92e9acaf623.gif"width="100"></img></h1>
   <p>Webpage by Hecatia/Hecanut/Heca/Laheca/admin Sukab</p>
   <hr>
-  <button id="unmuteButton">🔊 Unmute</button>
+  <button id="muteToggleBtn">🔊 Unmute</button>
  <video id="Sequence 02.mp4"width="100%" height="100%" autoplay muted loop playsinline>
     <source src="Sequence 02.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -43,14 +43,18 @@
 
 <script>
     const video = document.getElementById('Sequence 02.mp4');
-    const button = document.getElementById('unmuteButton');
+    const muteToggleBtn = document.getElementById('muteToggleBtn');
 
-    button.addEventListener('click', () => {
+    muteToggleBtn.addEventListener('click', function() {
+    if (video.muted) {
       video.muted = false;
-      video.play();
-      button.style.display = 'none';
-    });
-  </script>
+      muteToggleBtn.textContent = '🔇 Mute';
+    } else {
+      video.muted = true;
+      muteToggleBtn.textContent = '🔊 Unmute';
+    }
+  });
+</script>
 
   <p>disunat tapi "s" nya di hilang</p>
   <a href="page4.html">
