@@ -1,16 +1,36 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="id">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Joucho Trace</title>
         <style>
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
+            /* Container utama */
+            .wrapper {
+                display: flex;
+                justify-content: center; /* Membuat isi berada di tengah secara horizontal */
+                align-items: flex-start; /* Membuat isi menempel di bagian atas */
+                min-height: 100vh; /* Mengisi tinggi seluruh layar (opsional) */
+                background-color: #f0f0f0; /* Hanya untuk kontras background */
+                padding-top: 20px; /* Beri sedikit jarak dari batas paling atas jika mau */
+            }
+
+            /* Mengatur ukuran gambar agar besar */
+            .wrapper img {
+                width: 80%; /* Menggunakan persen agar responsif, atau ganti misal: 600px */
+                max-width: 800px; /* Batas maksimal ukuran besar gambar agar tidak pecah */
+                height: auto; /* Memastikan proporsi gambar tetap pas dan tidak gepeng */
+                border-radius: 8px; /* Opsional: mempercantik pinggiran gambar */
+            }
         </style>
-        <div style="width:800px; height:600px; background:red;">
-            <img src="images/1000009724.jpg"width="100"></img>
-        </div>
-        <img src="images/1000009725.jpg"width="100"></img>
     </head>
+    <body>
+        <div class="wrapper">
+            <img src="/images/1000009724.jpg" alt="Gambar Besar Tengah Atas" />
+        </div>
+        <br />
+        <div class="wrapper">
+            <img src="/images/1000009725.jpg" alt="Gambar Besar Tengah Atas" />
+        </div>
+    </body>
 </html>
